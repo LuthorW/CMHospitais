@@ -1,0 +1,24 @@
+PASTA DE FOTOS DOS MÉDICOS / LIDERANÇAS
+
+Para trocar uma foto, substitua o JPG de exemplo pela foto real mantendo EXATAMENTE o mesmo nome.
+
+Arquivos:
+- direcao-medica.jpg
+- direcao-assistencial.jpg
+- cardiologia.jpg
+- neurologia.jpg
+- oncologia.jpg
+- materno-infantil.jpg
+- ortopedia.jpg
+- pediatria.jpg
+- ginecologia-obstetricia.jpg
+- gastroenterologia.jpg
+- endocrinologia.jpg
+- dermatologia.jpg
+- urologia.jpg
+- oftalmologia.jpg
+- psiquiatria.jpg
+
+Formato recomendado: JPG vertical, aproximadamente 800x1000 px ou maior.
+
+Guia completo: veja COMO_ADICIONAR_FOTOS.md na pasta principal do site.

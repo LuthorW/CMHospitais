@@ -1,106 +1,876 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conti Moretti Hospitais | Excelência em Saúde</title>
-    <link rel="icon" type="image/jpg" href="logo.jpg">
-    <link rel="stylesheet" href="styles.css">
-    <!-- Fonte do Google Fonts para um visual moderno e elegante -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
-</head>
-<body>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="Conti Moretti Hospitais — especialidades, lideranças clínicas, estrutura e agendamento.">
+    <meta name="theme-color" content="#123f35">
+    <title>
+      Conti Moretti Hospitais | Excelência em Saúde
+    </title>
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+      try {
+        const savedTheme = localStorage.getItem('cm-theme');
 
-    <!-- Cabeçalho / Navegação -->
-    <header id="header">
-        <div class="container header-container">
-            <div class="logo">
-                <!-- Usaremos um texto estilizado representando a logo minimalista -->
-                <h1><span>C</span>M Hospitais</h1>
-            </div>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#home">Início</a></li>
-                    <li><a href="#especialidades">Especialidades</a></li>
-                    <li><a href="#sobre">Sobre Nós</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </nav>
-            <a href="#agendamento" class="btn-primary">Agendar Consulta</a>
-            <div class="menu-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+        if (savedTheme) {
+          document.documentElement.dataset.theme = savedTheme;
+        }
+      } catch (error) {
+        // If localStorage is unavailable, the default theme remains active.
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">
+      Pular para o conteúdo
+    </a>
+    <header id="header" class="site-header">
+      <div class="container header-container">
+        <a class="brand" href="index.html#home" aria-label="Conti Moretti Hospitais — início">
+          <img src="imgs/logo.png" alt="Conti Moretti Hospitais">
+          <span class="brand-name">
+            Conti Moretti
+            <small>
+              Hospitais
+            </small>
+          </span>
+        </a>
+        <nav id="main-nav" class="main-nav" aria-label="Navegação principal">
+          <a href="index.html#home">
+            Início
+          </a>
+          <a href="index.html#especialidades">
+            Especialidades
+          </a>
+          <a href="index.html#lideranca">
+            Lideranças
+          </a>
+          <a href="index.html#estrutura">
+            Estrutura
+          </a>
+          <a href="index.html#sobre">
+            Sobre
+          </a>
+          <a href="index.html#contato">
+            Contato
+          </a>
+        </nav>
+        <div class="header-tools">
+          <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Ativar tema escuro">
+            <svg class="moon" viewBox="0 0 24 24">
+              <path d="M20 15.5A8.5 8.5 0 1 1 8.5 4 7 7 0 0 0 20 15.5Z"/>
+            </svg>
+            <svg class="sun" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"/>
+            </svg>
+          </button>
+          <a href="index.html#agendamento" class="btn btn-primary header-cta">
+            Agendar consulta
+          </a>
+          <button class="menu-toggle" id="mobile-menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+            <span>
+            </span>
+            <span>
+            </span>
+            <span>
+            </span>
+          </button>
         </div>
+      </div>
     </header>
-
-    <main>
-        <!-- Seção Hero (Destaque Principal) -->
-        <section id="home" class="hero">
-            <div class="container hero-content">
-                <h2>Cuidado que inspira confiança.</h2>
-                <p>No Conti Moretti Hospitais, unimos tecnologia de ponta e atendimento humanizado para oferecer a melhor experiência em saúde para você e sua família.</p>
-                <div class="hero-buttons">
-                    <a href="#agendamento" class="btn-primary">Marque sua Consulta</a>
-                    <a href="#especialidades" class="btn-secondary">Conheça nossos serviços</a>
-                </div>
+    <main id="main-content">
+      <section id="home" class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <span class="eyebrow">
+              Conti Moretti Hospitais
+            </span>
+            <h1>
+              Cuidado que inspira confiança.
+            </h1>
+            <p>
+              Medicina de excelência, tecnologia e atendimento humanizado em uma estrutura organizada para acompanhar cada etapa do cuidado.
+            </p>
+            <div class="hero-actions">
+              <a href="#agendamento" class="btn btn-primary">
+                Marque sua consulta
+              </a>
+              <a href="#especialidades" class="btn btn-outline">
+                Explorar especialidades
+              </a>
             </div>
-        </section>
-
-        <!-- Seção de Especialidades -->
-        <section id="especialidades" class="services">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Nossas Especialidades</h2>
-                    <p>Corpo clínico altamente capacitado em diversas áreas da medicina.</p>
-                </div>
-                <div class="cards-grid">
-                    <div class="card">
-                        <div class="card-icon">❤️</div>
-                        <h3>Cardiologia</h3>
-                        <p>Prevenção, diagnóstico e tratamento de doenças do coração com precisão.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-icon">🧠</div>
-                        <h3>Neurologia</h3>
-                        <p>Acompanhamento completo para distúrbios do sistema nervoso.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-icon">🦴</div>
-                        <h3>Ortopedia</h3>
-                        <p>Especialistas em traumas, reabilitação e cirurgias ortopédicas.</p>
-                    </div>
-                    <div class="card">
-                        <div class="card-icon">👶</div>
-                        <h3>Pediatria</h3>
-                        <p>Cuidado integral e humanizado para o desenvolvimento do seu filho.</p>
-                    </div>
-                </div>
+            <div class="hero-notes">
+              <div>
+                <strong>
+                  Cuidado integrado
+                </strong>
+                <span>
+                  Especialidades conectadas em uma jornada mais simples.
+                </span>
+              </div>
+              <div>
+                <strong>
+                  Lideranças clínicas
+                </strong>
+                <span>
+                  Espaço dedicado aos responsáveis por cada grande área.
+                </span>
+              </div>
             </div>
-        </section>
+          </div>
+          <div class="hero-visual reveal">
+            <div class="hero-logo-card">
+              <img src="imgs/logo.png" alt="Símbolo Conti Moretti Hospitais">
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="especialidades" class="section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">
+              Especialidades
+            </span>
+            <h2>
+              Centros de cuidado organizados por área.
+            </h2>
+            <p>
+              As especialidades agora têm páginas próprias, com mais espaço para explicar linhas de cuidado, recursos e liderança clínica.
+            </p>
+          </div>
+          <div class="specialty-grid">
+            <a class="specialty-card reveal" href="especialidades/cardiologia.html">
+              <div class="specialty-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8l1.1 1.1L12 21.3l7.8-7.8 1.1-1.1a5.5 5.5 0 0 0-.1-7.8Z"/>
+                </svg>
+              </div>
+              <span class="card-number">
+                01
+              </span>
+              <h3>
+                Cardiologia
+              </h3>
+              <p>
+                Prevenção, diagnóstico e acompanhamento cardiovascular com cuidado integrado.
+              </p>
+              <span class="card-link">
+                Conhecer especialidade
+                <span>
+                  →
+                </span>
+              </span>
+            </a>
+            <a class="specialty-card reveal" href="especialidades/neurologia.html">
+              <div class="specialty-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9.5 4.5A3.5 3.5 0 0 0 6 8v.5A3.5 3.5 0 0 0 3 12a3.5 3.5 0 0 0 3 3.5V16a3.5 3.5 0 0 0 3.5 3.5H11v-15H9.5Zm5 0H13v15h1.5A3.5 3.5 0 0 0 18 16v-.5a3.5 3.5 0 0 0 3-3.5 3.5 3.5 0 0 0-3-3.5V8a3.5 3.5 0 0 0-3.5-3.5Z"/>
+                </svg>
+              </div>
+              <span class="card-number">
+                02
+              </span>
+              <h3>
+                Neurologia
+              </h3>
+              <p>
+                Avaliação especializada do sistema nervoso, memória, movimento e qualidade de vida.
+              </p>
+              <span class="card-link">
+                Conhecer especialidade
+                <span>
+                  →
+                </span>
+              </span>
+            </a>
+            <a class="specialty-card reveal" href="especialidades/ortopedia.html">
+              <div class="specialty-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M7 4a2 2 0 1 0-3 1.7v12.6A2 2 0 1 0 7 20l10-10a2 2 0 1 0-3-3L7 14V4Z"/>
+                </svg>
+              </div>
+              <span class="card-number">
+                03
+              </span>
+              <h3>
+                Ortopedia
+              </h3>
+              <p>
+                Diagnóstico, tratamento e reabilitação para mobilidade, trauma e saúde musculoesquelética.
+              </p>
+              <span class="card-link">
+                Conhecer especialidade
+                <span>
+                  →
+                </span>
+              </span>
+            </a>
+            <a class="specialty-card reveal" href="especialidades/pediatria.html">
+              <div class="specialty-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="7" r="3"/>
+                  <path d="M5 21v-2a7 7 0 0 1 14 0v2M8 14l4 3 4-3"/>
+                </svg>
+              </div>
+              <span class="card-number">
+                04
+              </span>
+              <h3>
+                Pediatria
+              </h3>
+              <p>
+                Cuidado integral e acolhedor para acompanhar cada fase do desenvolvimento infantil.
+              </p>
+              <span class="card-link">
+                Conhecer especialidade
+                <span>
+                  →
+                </span>
+              </span>
+            </a>
+            <a class="specialty-card reveal" href="especialidades/oncologia.html">
+              <div class="specialty-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 3c3 0 5 2.2 5 5 0 4-5 8-5 13-1-3-5-7-5-11 0-4 2-7 5-7Z"/>
+                  <path d="M9 8c2 2 4 2 6 0"/>
+                </svg>
+              </div>
+              <span class="card-number">
+                05
+              </span>
+              <h3>
+                Oncologia
+              </h3>
+              <p>
+                Cuidado oncológico coordenado, com acompanhamento multidisciplinar em toda a jornada.
+              </p>
+              <span class="card-link">
+                Conhecer especialidade
+                <span>
+                  →
+                </span>
+              </span>
+            </a>
+            <a class="specialty-card reveal" href="especialidades/ginecologia-obstetricia.html">
+              <div class="specialty-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="8" r="4"/>
+                  <path d="M12 12v9M8 17h8"/>
+                </svg>
+              </div>
+              <span class="card-number">
+                06
+              </span>
+              <h3>
+                Ginecologia & Obstetrícia
+              </h3>
+              <p>
+                Saúde da mulher, prevenção, acompanhamento ginecológico e cuidado durante a gestação.
+              </p>
+              <span class="card-link">
+                Conhecer especialidade
+                <span>
+                  →
+                </span>
+              </span>
+            </a>
+            <a class="specialty-card reveal" href="especialidades/gastroenterologia.html">
+              <div class="specialty-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M8 3v6c0 2 2 3 4 3 3 0 5 2 5 5a4 4 0 0 1-8 0c0-2 1-3 2-4"/>
+                </svg>
+              </div>
+              <span class="card-number">
+                07
+              </span>
+              <h3>
+                Gastroenterologia
+              </h3>
+              <p>
+                Avaliação e acompanhamento do sistema digestivo com apoio diagnóstico integrado.
+              </p>
+              <span class="card-link">
+                Conhecer especialidade
+                <span>
+                  →
+                </span>
+              </span>
+            </a>
+            <a class="specialty-card reveal" href="especialidades/endocrinologia.html">
+              <div class="specialty-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M3 12h4l2-5 4 10 2-5h6"/>
+                </svg>
+              </div>
+              <span class="card-number">
+                08
+              </span>
+              <h3>
+                Endocrinologia
+              </h3>
+              <p>
+                Acompanhamento metabólico e hormonal com foco em prevenção e equilíbrio clínico.
+              </p>
+              <span class="card-link">
+                Conhecer especialidade
+                <span>
+                  →
+                </span>
+              </span>
+            </a>
+            <a class="specialty-card reveal" href="especialidades/dermatologia.html">
+              <div class="specialty-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2l1.5 5.5L19 9l-5.5 1.5L12 16l-1.5-5.5L5 9l5.5-1.5L12 2Z"/>
+                  <path d="M19 15l.8 2.2L22 18l-2.2.8L19 21l-.8-2.2L16 18l2.2-.8L19 15Z"/>
+                </svg>
+              </div>
+              <span class="card-number">
+                09
+              </span>
+              <h3>
+                Dermatologia
+              </h3>
+              <p>
+                Saúde da pele, cabelos e unhas com avaliação clínica e acompanhamento individualizado.
+              </p>
+              <span class="card-link">
+                Conhecer especialidade
+                <span>
+                  →
+                </span>
+              </span>
+            </a>
+            <a class="specialty-card reveal" href="especialidades/urologia.html">
+              <div class="specialty-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 3s5 6 5 10a5 5 0 1 1-10 0c0-4 5-10 5-10Z"/>
+                </svg>
+              </div>
+              <span class="card-number">
+                10
+              </span>
+              <h3>
+                Urologia
+              </h3>
+              <p>
+                Cuidado do trato urinário e saúde masculina com abordagem preventiva e especializada.
+              </p>
+              <span class="card-link">
+                Conhecer especialidade
+                <span>
+                  →
+                </span>
+              </span>
+            </a>
+            <a class="specialty-card reveal" href="especialidades/oftalmologia.html">
+              <div class="specialty-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M2 12s4-6 10-6 10 6 10 6-4 6-10 6S2 12 2 12Z"/>
+                  <circle cx="12" cy="12" r="2.5"/>
+                </svg>
+              </div>
+              <span class="card-number">
+                11
+              </span>
+              <h3>
+                Oftalmologia
+              </h3>
+              <p>
+                Avaliação da saúde ocular, prevenção e acompanhamento de alterações da visão.
+              </p>
+              <span class="card-link">
+                Conhecer especialidade
+                <span>
+                  →
+                </span>
+              </span>
+            </a>
+            <a class="specialty-card reveal" href="especialidades/psiquiatria.html">
+              <div class="specialty-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M9 4a4 4 0 0 0-4 4v1a4 4 0 0 0-2 3.5A4.5 4.5 0 0 0 7.5 17H9v3h6v-4a5 5 0 0 0 4-5V9a5 5 0 0 0-5-5H9Z"/>
+                  <path d="M9 8h6M9 12h4"/>
+                </svg>
+              </div>
+              <span class="card-number">
+                12
+              </span>
+              <h3>
+                Psiquiatria
+              </h3>
+              <p>
+                Cuidado em saúde mental com escuta qualificada, acompanhamento e integração assistencial.
+              </p>
+              <span class="card-link">
+                Conhecer especialidade
+                <span>
+                  →
+                </span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section id="lideranca" class="section leadership-section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">
+              Lideranças clínicas
+            </span>
+            <h2>
+              Quem conduz cada grande área.
+            </h2>
+            <p>
+              Estrutura pronta para apresentar diretores, chefes de centros e responsáveis pelas principais especialidades.
+            </p>
+          </div>
+          <div class="leaders-grid">
+            <article class="leader-card reveal">
+              <!-- FOTO: salve/substitua em imgs/medicos/direcao-medica.jpg -->
+              <div class="leader-avatar">
+                <img
+                  src="imgs/medicos/direcao-medica.jpg"
+                  alt="Direção Médica"
+                  class="leader-photo"
+                  loading="lazy"
+                >
+              </div>
+              <div class="leader-content">
+                <span>
+                  Direção Médica
+                </span>
+                <h3>
+                  Nome do(a) responsável
+                </h3>
+                <p>
+                  Direção clínica, qualidade assistencial e integração do corpo médico.
+                </p>
+                <!-- Arquivo da foto: imgs/medicos/direcao-medica.jpg -->
+              </div>
+            </article>
+            <article class="leader-card reveal">
+              <!-- FOTO: salve/substitua em imgs/medicos/direcao-assistencial.jpg -->
+              <div class="leader-avatar">
+                <img
+                  src="imgs/medicos/direcao-assistencial.jpg"
+                  alt="Direção Assistencial"
+                  class="leader-photo"
+                  loading="lazy"
+                >
+              </div>
+              <div class="leader-content">
+                <span>
+                  Direção Assistencial
+                </span>
+                <h3>
+                  Nome do(a) responsável
+                </h3>
+                <p>
+                  Coordenação do cuidado, enfermagem e experiência do paciente.
+                </p>
+                <!-- Arquivo da foto: imgs/medicos/direcao-assistencial.jpg -->
+              </div>
+            </article>
+            <article class="leader-card reveal">
+              <!-- FOTO: salve/substitua em imgs/medicos/cardiologia.jpg -->
+              <div class="leader-avatar">
+                <img
+                  src="imgs/medicos/cardiologia.jpg"
+                  alt="Chefia do Centro Cardiovascular"
+                  class="leader-photo"
+                  loading="lazy"
+                >
+              </div>
+              <div class="leader-content">
+                <span>
+                  Centro Cardiovascular
+                </span>
+                <h3>
+                  Nome do(a) responsável
+                </h3>
+                <p>
+                  Chefia da cardiologia e linhas de cuidado cardiovascular.
+                </p>
+                <!-- Arquivo da foto: imgs/medicos/cardiologia.jpg -->
+              </div>
+            </article>
+            <article class="leader-card reveal">
+              <!-- FOTO: salve/substitua em imgs/medicos/neurologia.jpg -->
+              <div class="leader-avatar">
+                <img
+                  src="imgs/medicos/neurologia.jpg"
+                  alt="Chefia do Centro de Neurociências"
+                  class="leader-photo"
+                  loading="lazy"
+                >
+              </div>
+              <div class="leader-content">
+                <span>
+                  Centro de Neurociências
+                </span>
+                <h3>
+                  Nome do(a) responsável
+                </h3>
+                <p>
+                  Chefia da neurologia e integração das linhas neuroclínicas.
+                </p>
+                <!-- Arquivo da foto: imgs/medicos/neurologia.jpg -->
+              </div>
+            </article>
+            <article class="leader-card reveal">
+              <!-- FOTO: salve/substitua em imgs/medicos/oncologia.jpg -->
+              <div class="leader-avatar">
+                <img
+                  src="imgs/medicos/oncologia.jpg"
+                  alt="Chefia do Centro de Oncologia"
+                  class="leader-photo"
+                  loading="lazy"
+                >
+              </div>
+              <div class="leader-content">
+                <span>
+                  Centro de Oncologia
+                </span>
+                <h3>
+                  Nome do(a) responsável
+                </h3>
+                <p>
+                  Coordenação do cuidado oncológico e abordagem multidisciplinar.
+                </p>
+                <!-- Arquivo da foto: imgs/medicos/oncologia.jpg -->
+              </div>
+            </article>
+            <article class="leader-card reveal">
+              <!-- FOTO: salve/substitua em imgs/medicos/materno-infantil.jpg -->
+              <div class="leader-avatar">
+                <img
+                  src="imgs/medicos/materno-infantil.jpg"
+                  alt="Chefia do Centro Materno-Infantil"
+                  class="leader-photo"
+                  loading="lazy"
+                >
+              </div>
+              <div class="leader-content">
+                <span>
+                  Centro Materno-Infantil
+                </span>
+                <h3>
+                  Nome do(a) responsável
+                </h3>
+                <p>
+                  Integração entre pediatria, ginecologia e obstetrícia.
+                </p>
+                <!-- Arquivo da foto: imgs/medicos/materno-infantil.jpg -->
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section id="estrutura" class="section structure-section">
+        <div class="container structure-grid">
+          <div class="structure-copy reveal">
+            <span class="eyebrow">
+              Estrutura & tecnologia
+            </span>
+            <h2>
+              Um hospital mais organizado para cuidar melhor.
+            </h2>
+            <p>
+              Fluxos assistenciais, apoio diagnóstico e ambientes preparados para integrar profissionais, pacientes e famílias.
+            </p>
+            <div class="feature-list">
+              <div>
+                <span class="feature-dot">
+                </span>
+                <div>
+                  <strong>
+                    Centros especializados
+                  </strong>
+                  <p>
+                    Especialidades agrupadas em linhas de cuidado mais claras.
+                  </p>
+                </div>
+              </div>
+              <div>
+                <span class="feature-dot">
+                </span>
+                <div>
+                  <strong>
+                    Apoio diagnóstico
+                  </strong>
+                  <p>
+                    Recursos que ajudam a acelerar decisões clínicas.
+                  </p>
+                </div>
+              </div>
+              <div>
+                <span class="feature-dot">
+                </span>
+                <div>
+                  <strong>
+                    Jornada integrada
+                  </strong>
+                  <p>
+                    Do acolhimento ao acompanhamento, com continuidade.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="structure-panel reveal">
+            <div class="panel-topline">
+              <span>
+                Experiência Conti Moretti
+              </span>
+              <span>
+                Cuidado contínuo
+              </span>
+            </div>
+            <div class="panel-center">
+              <div>
+                <img src="imgs/logo.png" alt="Conti Moretti Hospitais">
+                <p>
+                  Precisão clínica.
+                  <br>
+                  Presença humana.
+                </p>
+              </div>
+            </div>
+            <div class="panel-grid">
+              <div>
+                <strong>
+                  01
+                </strong>
+                <span>
+                  Acolhimento
+                </span>
+              </div>
+              <div>
+                <strong>
+                  02
+                </strong>
+                <span>
+                  Diagnóstico
+                </span>
+              </div>
+              <div>
+                <strong>
+                  03
+                </strong>
+                <span>
+                  Tratamento
+                </span>
+              </div>
+              <div>
+                <strong>
+                  04
+                </strong>
+                <span>
+                  Acompanhamento
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="sobre" class="section about-section">
+        <div class="container about-grid">
+          <div class="about-mark reveal">
+            <img src="imgs/logo.png" alt="Símbolo Conti Moretti Hospitais">
+          </div>
+          <div class="about-copy reveal">
+            <span class="eyebrow">
+              Sobre o Conti Moretti
+            </span>
+            <h2>
+              Excelência que também sabe acolher.
+            </h2>
+            <p>
+              O cuidado em saúde exige precisão, mas também clareza, confiança e uma estrutura capaz de aproximar especialidades e profissionais.
+            </p>
+            <blockquote>
+              “Sua saúde em primeiro lugar.”
+            </blockquote>
+          </div>
+        </div>
+      </section>
+      <section id="agendamento" class="section appointment-section">
+        <div class="container appointment-grid">
+          <div class="appointment-copy reveal">
+            <span class="eyebrow">
+              Agendamento
+            </span>
+            <h2>
+              Seu cuidado começa aqui.
+            </h2>
+            <p>
+              Selecione uma especialidade e prepare uma solicitação de atendimento.
+            </p>
+            <div class="appointment-contact">
+              <span>
+                Central de atendimento
+              </span>
+              <strong>
+                (11) 4000-0000
+              </strong>
+              <span>
+                contato@contimoretti.com.br
+              </span>
+            </div>
+          </div>
+          <form id="appointment-form" class="appointment-form reveal">
+            <div class="field-group">
+              <label for="patient-name">
+                Nome
+              </label>
+              <input id="patient-name" name="name" type="text" placeholder="Seu nome completo" required>
+            </div>
+            <div class="field-row">
+              <div class="field-group">
+                <label for="patient-phone">
+                  Telefone
+                </label>
+                <input id="patient-phone" name="phone" type="tel" placeholder="(00) 00000-0000" required>
+              </div>
+              <div class="field-group">
+                <label for="patient-email">
+                  E-mail
+                </label>
+                <input id="patient-email" name="email" type="email" placeholder="voce@email.com" required>
+              </div>
+            </div>
+            <div class="field-group">
+              <label for="specialty">
+                Especialidade
+              </label>
+              <select id="specialty" name="specialty" required>
+                <option value="">
+                  Selecione
+                </option>
+                <option value="Cardiologia">
+                  Cardiologia
+                </option>
+                <option value="Neurologia">
+                  Neurologia
+                </option>
+                <option value="Ortopedia">
+                  Ortopedia
+                </option>
+                <option value="Pediatria">
+                  Pediatria
+                </option>
+                <option value="Oncologia">
+                  Oncologia
+                </option>
+                <option value="Ginecologia & Obstetrícia">
+                  Ginecologia & Obstetrícia
+                </option>
+                <option value="Gastroenterologia">
+                  Gastroenterologia
+                </option>
+                <option value="Endocrinologia">
+                  Endocrinologia
+                </option>
+                <option value="Dermatologia">
+                  Dermatologia
+                </option>
+                <option value="Urologia">
+                  Urologia
+                </option>
+                <option value="Oftalmologia">
+                  Oftalmologia
+                </option>
+                <option value="Psiquiatria">
+                  Psiquiatria
+                </option>
+              </select>
+            </div>
+            <div class="field-group">
+              <label for="message">
+                Observações
+              </label>
+              <textarea id="message" name="message" rows="4" placeholder="Se desejar, conte brevemente como podemos ajudar.">
+              </textarea>
+            </div>
+            <button class="btn btn-primary" type="submit">
+              Preparar solicitação
+            </button>
+            <p id="form-status" class="form-status" role="status">
+            </p>
+          </form>
+        </div>
+      </section>
     </main>
-
-    <!-- Rodapé -->
-    <footer id="contato">
-        <div class="container footer-content">
-            <div class="footer-brand">
-                <h2>Conti Moretti</h2>
-                <p>HOSPITAIS</p>
-                <p class="slogan">Sua saúde em primeiro lugar.</p>
-            </div>
-            <div class="footer-info">
-                <h3>Contato</h3>
-                <p>Telefone: (11) 4000-0000</p>
-                <p>Email: contato@contimoretti.com.br</p>
-                <p>Endereço: Av. Principal, 1000 - Centro</p>
-            </div>
+    <footer class="site-footer" id="contato">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <img src="imgs/logo.png" alt="Conti Moretti Hospitais">
+          <div>
+            <strong>
+              Conti Moretti
+            </strong>
+            <span>
+              Hospitais
+            </span>
+          </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 Conti Moretti Hospitais. Todos os direitos reservados.</p>
+        <div class="footer-column">
+          <h3>
+            Hospital
+          </h3>
+          <a href="index.html#sobre">
+            Sobre
+          </a>
+          <a href="index.html#estrutura">
+            Estrutura
+          </a>
+          <a href="index.html#lideranca">
+            Lideranças
+          </a>
         </div>
+        <div class="footer-column">
+          <h3>
+            Atendimento
+          </h3>
+          <a href="index.html#especialidades">
+            Especialidades
+          </a>
+          <a href="index.html#agendamento">
+            Agendamento
+          </a>
+          <p>
+            (11) 4000-0000
+          </p>
+        </div>
+        <div class="footer-column">
+          <h3>
+            Contato
+          </h3>
+          <p>
+            contato@contimoretti.com.br
+          </p>
+          <p>
+            Atendimento institucional
+          </p>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>
+          © 2034 Conti Moretti Hospitais.
+        </span>
+        <span>
+          Excelência clínica com presença humana.
+        </span>
+      </div>
     </footer>
-
-    <script src="script.js"></script>
-</body>
+    <script src="script.js" defer>
+    </script>
+  </body>
 </html>

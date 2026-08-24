@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="description" content="Endocrinologia no Conti Moretti Hospitais.">
+    <meta name="theme-color" content="#123f35">
+    <title>
+      Endocrinologia | Conti Moretti Hospitais
+    </title>
+    <link rel="icon" href="../favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    <script>
+      try {
+        const savedTheme = localStorage.getItem('cm-theme');
+
+        if (savedTheme) {
+          document.documentElement.dataset.theme = savedTheme;
+        }
+      } catch (error) {
+        // If localStorage is unavailable, the default theme remains active.
+      }
+    </script>
+  </head>
+  <body class="specialty-page">
+    <header id="header" class="site-header">
+      <div class="container header-container">
+        <a class="brand" href="../index.html#home" aria-label="Conti Moretti Hospitais — início">
+          <img src="../imgs/logo.png" alt="Conti Moretti Hospitais">
+          <span class="brand-name">
+            Conti Moretti
+            <small>
+              Hospitais
+            </small>
+          </span>
+        </a>
+        <nav id="main-nav" class="main-nav" aria-label="Navegação principal">
+          <a href="../index.html#home">
+            Início
+          </a>
+          <a href="../index.html#especialidades">
+            Especialidades
+          </a>
+          <a href="../index.html#lideranca">
+            Lideranças
+          </a>
+          <a href="../index.html#estrutura">
+            Estrutura
+          </a>
+          <a href="../index.html#sobre">
+            Sobre
+          </a>
+          <a href="../index.html#contato">
+            Contato
+          </a>
+        </nav>
+        <div class="header-tools">
+          <button id="theme-toggle" class="theme-toggle" type="button" aria-label="Ativar tema escuro">
+            <svg class="moon" viewBox="0 0 24 24">
+              <path d="M20 15.5A8.5 8.5 0 1 1 8.5 4 7 7 0 0 0 20 15.5Z"/>
+            </svg>
+            <svg class="sun" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="4"/>
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"/>
+            </svg>
+          </button>
+          <a href="../index.html#agendamento" class="btn btn-primary header-cta">
+            Agendar consulta
+          </a>
+          <button class="menu-toggle" id="mobile-menu" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="main-nav">
+            <span>
+            </span>
+            <span>
+            </span>
+            <span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <main id="main-content">
+      <section class="specialty-hero">
+        <div class="container specialty-hero-grid">
+          <div class="reveal">
+            <span class="eyebrow">
+              Especialidade • 08
+            </span>
+            <h1>
+              Endocrinologia
+            </h1>
+            <p>
+              Acompanhamento metabólico e hormonal com foco em prevenção e equilíbrio clínico.
+            </p>
+            <div class="specialty-actions">
+              <a class="btn btn-primary" href="../index.html#agendamento">
+                Agendar atendimento
+              </a>
+              <a class="btn btn-outline" href="../index.html#especialidades">
+                Todas as especialidades
+              </a>
+            </div>
+          </div>
+          <div class="specialty-hero-icon reveal">
+            <div class="specialty-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 12h4l2-5 4 10 2-5h6"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="container specialty-content-grid">
+          <article class="info-panel reveal">
+            <span class="eyebrow">
+              Linhas de cuidado
+            </span>
+            <h2>
+              Atendimento especializado e integrado.
+            </h2>
+            <p style="margin-top:15px;color:var(--muted)">
+              Esta página foi estruturada para receber informações específicas da especialidade sem sobrecarregar a página principal do hospital.
+            </p>
+            <div class="focus-list">
+              <div class="focus-item">
+                Diabetes
+              </div>
+              <div class="focus-item">
+                Tireoide
+              </div>
+              <div class="focus-item">
+                Metabolismo e saúde hormonal
+              </div>
+            </div>
+          </article>
+          <aside class="specialty-leader reveal">
+            <span class="eyebrow">
+              Liderança da área
+            </span>
+            <!-- FOTO DO(A) CHEFE: salve/substitua em ../imgs/medicos/endocrinologia.jpg -->
+            <div class="leader-avatar">
+              <img
+                src="../imgs/medicos/endocrinologia.jpg"
+                alt="Chefia de Endocrinologia"
+                class="leader-photo"
+                loading="lazy"
+              >
+            </div>
+            <h2>
+              Chefia da especialidade
+            </h2>
+            <h3>
+              Nome do(a) responsável
+            </h3>
+            <p>
+              Chefia de Endocrinologia
+            </p>
+            <!--
+              FOTO: ../imgs/medicos/endocrinologia.jpg
+              NOME: substitua "Nome do(a) responsável" no <h3> acima.
+              CARGO/BIO: edite o <p> logo abaixo do nome.
+            -->
+          </aside>
+        </div>
+      </section>
+      <section class="section" style="padding-top:0">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow">
+              Experiência assistencial
+            </span>
+            <h2>
+              Um caminho simples entre consulta, diagnóstico e acompanhamento.
+            </h2>
+            <p>
+              A estrutura da página permite adicionar exames, procedimentos, tecnologias e equipe médica específicos desta área futuramente.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer" id="contato">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <img src="../imgs/logo.png" alt="Conti Moretti Hospitais">
+          <div>
+            <strong>
+              Conti Moretti
+            </strong>
+            <span>
+              Hospitais
+            </span>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3>
+            Hospital
+          </h3>
+          <a href="../index.html#sobre">
+            Sobre
+          </a>
+          <a href="../index.html#estrutura">
+            Estrutura
+          </a>
+          <a href="../index.html#lideranca">
+            Lideranças
+          </a>
+        </div>
+        <div class="footer-column">
+          <h3>
+            Atendimento
+          </h3>
+          <a href="../index.html#especialidades">
+            Especialidades
+          </a>
+          <a href="../index.html#agendamento">
+            Agendamento
+          </a>
+          <p>
+            (11) 4000-0000
+          </p>
+        </div>
+        <div class="footer-column">
+          <h3>
+            Contato
+          </h3>
+          <p>
+            contato@contimoretti.com.br
+          </p>
+          <p>
+            Atendimento institucional
+          </p>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>
+          © 2034 Conti Moretti Hospitais.
+        </span>
+        <span>
+          Excelência clínica com presença humana.
+        </span>
+      </div>
+    </footer>
+    <script src="../script.js" defer>
+    </script>
+  </body>
+</html>
